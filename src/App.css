@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  transition: all 0.5s linear;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home {
+  width: 1156px;
+  margin-top: 120px;
+}
+
+.home h2 {
+  font-weight: 400;
+  color: #174348;
+}
+
+.home .input-bar input {
+  width: 954px;
+  height: 52px;
+  border: 1px solid #ffcd04;
+  border-radius: 4px;
+  padding-left: 16px;
+}
+
+.home .input-bar input::placeholder {
+  color: #dfdfdf;
+}
+
+.home .input-bar input[type="submit"] {
+  width: 100px;
+  height: 52px;
+  background-color: #008594;
+  border: 1px solid #008594;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.home .input-bar input[type="submit"]:hover{
+  background-color: #fff;
+  color: #008594;
+  border: 1px solid #ffcd04;
+}
+
+.home .input-bar span {
+  font-size: 12px;
+  color: #FF3104;
+}
+
+.home .input-bar form {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.home .input-bar form .delete {
+  position: absolute;
+  left: 920px;
+  font-size: 30px;
+  color: #174348;
+  cursor: pointer;
+  line-height: 52px;
+
+}
+
+.home .no-tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.home .no-tasks p {
+  font-size: 36px;
+  font-weight: 500;
+  color: #666;
+}
+.home .no-tasks p:first-child {
+  font-size: 24px;
+  font-weight: 500;
+  color: #acacac;
+}
+
+.home .hide-completed {
+  margin-bottom: 40px;
+  padding-left: 84.2%;
+}
+
+.home .hide-completed label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.home .hide-completed input{
+  width: 18px;
+  height: 18px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks .task {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.tasks .task label {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  color: #666;
+}
+
+.tasks .task input {
+  margin-right: 25px;
+}
+
+.check-box {
+  height: 20px;
+  width: 20px;
+  line-height: 18px;
+  text-align: center;
+  border: 1px solid #008594;
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.check-box.styled-checkbox {
+  background: #008594;
+  border: 1px solid #008594;
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.delete {
+  font-size: 30px;
+  color: #174348;
+  cursor: pointer;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal .modal-window {
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.modal .modal-window p {
+  font-weight: 500;
+  color: #008598;
+}
+
+.modal .modal-window span {
+  font-weight: 600;
+  color: #174348;
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .home {
+    width: 856px;
+  }
+
+  .home .input-bar input {
+    width: 654px;
+    height: 48px;
+  }
+
+  .home .input-bar input[type="submit"] {
+    width: 100px;
+    height: 48px;
+  }
+
+  .home .input-bar form .delete {
+    left: 620px;
+  }
+
+  .home .hide-completed {
+    padding-left: 78.7%;
+  }
+
+  .home .no-tasks p {
+    font-size: 27px;
+  }
+
+  .home .no-tasks p:first-child {
+    font-size: 19px;
+  }
+
+}
+
+@media (max-width: 880px) {
+
+  .home .input-bar form {
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .home {
+    width: 654px;
+  }
+
+  .home .input-bar input {
+    width: 654px;
+    height: 48px;
+  }
+
+  .home .input-bar input[type="submit"] {
+    margin-left: 554px;
+    width: 100px;
+    height: 48px;
+  }
+
+  .home .input-bar form .delete {
+    left: 620px;
+    top: 0px;
+  }
+
+  .home .input-bar {
+    position: relative;
+  }
+  .home .input-bar span {
+    position: absolute;
+    top: 48px;
+  }
+
+  .home .hide-completed {
+    padding-left: 472px;
+  }
+}
+
+@media (max-width: 780px) {
+
+  * {
+    font-size: 17px;
+  }
+
+  .home {
+    width: 513px;
+  }
+
+  .home .input-bar input {
+    width: 513px;
+    height: 48px;
+  }
+
+  .home .input-bar input[type="submit"] {
+    margin-left: 413px;
+    width: 100px;
+    height: 48px;
+  }
+
+  .home .input-bar form .delete {
+    left: 479px;
+    top: 0px;
+  }
+
+  .home .hide-completed {
+    padding-left: 339px;
+  }
+}
+
+
+@media (max-width: 630px) {
+
+  * {
+    font-size: 16px;
+  }
+
+  .home {
+    width: 372px;
+  }
+
+  .home .input-bar input {
+    width: 372px;
+    height: 44px;
+  }
+
+  .home .input-bar input[type="submit"] {
+    margin-left: 272px;
+    width: 100px;
+    height: 44px;
+  }
+
+  .home .input-bar form .delete {
+    left: 338px;
+  }
+
+  .home .input-bar span {
+    top: 44px;
+  }
+
+  .home .hide-completed {
+    padding-left: 206px;
+  }
+
+  .home .no-tasks p {
+    font-size: 18px;
+  }
+
+  .home .no-tasks p:first-child {
+    font-size: 14px;
+  }
+
+  .check-box {
+    height: 16px;
+    width: 16px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 375px) {
+
+  .home {
+    width: 327px;
+  }
+
+  .home .input-bar input {
+    width: 327px;
+    height: 44px;
+  }
+
+  .home .input-bar input[type="submit"] {
+    margin-left: 227px;
+    width: 100px;
+    height: 44px;
+  }
+
+  .home .input-bar form .delete {
+    left: 293px;
+  }
+
+  .home .hide-completed {
+    padding-left: 164px;
+  }
+
+  .modal .modal-window {
+    width: 324px;
+    height: 140px;
+    gap: 20px;
+  }
+
+  .tasks .task label {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    color: #666;
+    width: 300px;
+  }
+  
+}
